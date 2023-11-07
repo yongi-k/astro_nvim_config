@@ -91,6 +91,8 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.g.copilot_no_tab_map = true
+    vim.api.nvim_set_keymap("i", "<C-i>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
     -- textDocument/diagnostic support until 0.10.0 is released
     _timers = {}
